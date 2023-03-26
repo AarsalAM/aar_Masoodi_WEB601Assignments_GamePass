@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "generatepipe": "ng generate pipe",
+    "generatedirective": "ng generate directive",
+    "generatecomponent": "ng generate component"
   },
   "private": true,
   "dependencies": {
