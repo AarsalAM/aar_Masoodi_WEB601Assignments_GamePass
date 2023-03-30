@@ -1,3 +1,14 @@
 .myCard {
+    width: 30%;
+    float: left;
+    display: inline;
     border: solid 1px black;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.isFirst {
+    border: solid 2px black;
 }

@@ -1,3 +1,6 @@
-<span [innerHTML]="myContentList.getPrint(0)"></span>
-<span [innerHTML]="myContentList.getPrint(1)"></span>
-<span [innerHTML]="myContentList.getPrint(2)"></span>
+<div *ngIf="content.id <= 5" class="myCard">
+    <h1>{{content.title}}</h1>
+    <p>{{content.description}}</p>
+    <img src="{{content.imgURL}}" (click)="clickInfo(content)"/>
+    <p>{{content.tags}}</p>
+</div>
