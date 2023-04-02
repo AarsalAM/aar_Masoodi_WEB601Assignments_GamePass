@@ -28,7 +28,6 @@ export class ContentListComponent {
         description: 'Explore Mexico like never before!',
         creator: 'Playground Studios',
         type: 'Racing',
-        imgURL: 'https://store-images.s-microsoft.com/image/apps.6614.13806078025361171.9723cf5e-1e29-4d9d-ad0a-cc37a95bb75d.b5dcb363-3613-4901-bf2d-f19c13b54a3d?w=120&h=120&q=60',
         tags: ['racing','open-world']
       },
       {
