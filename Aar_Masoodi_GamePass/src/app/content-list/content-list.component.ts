@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 
 @Component({
@@ -10,6 +10,7 @@ export class ContentListComponent {
 
   contentArray: Content[];
 
+  @Input() searchText: any;
   constructor() {
     this.contentArray = [
       {
@@ -45,7 +46,7 @@ export class ContentListComponent {
         description: 'Sail as a pirate!',
         creator: 'Rare',
         type: 'Adventure',
-        imgURL: 'https://www.juegostorrentpc.net/wp-content/uploads/2020/03/Doom-eternal-cover-pc-150x150.jpg',
+        imgURL: 'https://th.bing.com/th/id/OIP.MNlwdmNMB8H7hakc109i7wHaLH?pid=ImgDet&rs=1',
         tags: ['adventure','sailing','pvp']
       },
       {
@@ -53,8 +54,7 @@ export class ContentListComponent {
         title: 'Dirt 5',
         description: 'Dirt racing!',
         creator: 'Codemasters',
-        type: 'Racing',
-        imgURL: 'https://www.juegostorrentpc.net/wp-content/uploads/2020/03/Doom-eternal-cover-pc-150x150.jpg',
+        imgURL: 'https://th.bing.com/th/id/OIP.o6zCWyyqWMIod-N_0GtmbAHaIX?pid=ImgDet&rs=1',
         tags: ['racing','arcade']
       },
       {
@@ -63,10 +63,30 @@ export class ContentListComponent {
         description: 'An adventure awaits.',
         creator: 'Lionhead',
         type: 'Adventure',
-        imgURL: 'https://www.juegostorrentpc.net/wp-content/uploads/2020/03/Doom-eternal-cover-pc-150x150.jpg',
+        imgURL: 'https://th.bing.com/th/id/R.2dccf8c844dbf311b51565b66efb2cd2?rik=PxhFKWe%2fzjtXxw&pid=ImgRaw&r=0',
         tags: ['adventure','player-choice']
+      },
+      {
+        id: 7,
+        title: 'Monster Hunter Rise',
+        description: 'Hunt them all!',
+        creator: 'Capcom',
+        imgURL: 'https://cdn-prod.scalefast.com/public/assets/user/8731055/image/ba9d8b58c4c8e28d103a4b90cee7cd58.png',
+        tags: ['co-op','grindy']
       }
     ];
+  }
+  isFound: string = "";
+  searchContent(searchText: string) {
+    this.isFound = "This Item Was Not Found";
+    document.getElementById('search')?.classList.add('isNotFound');
+    this.contentArray.forEach((contentItem) => {
+      if(contentItem.title === searchText) {
+        console.log('Item was found');
+        this.isFound = "This Item Was Found";
+        document.getElementById('search')?.classList.replace('isNotFound', 'isFound');
+      }
+    });
   }
 
 
