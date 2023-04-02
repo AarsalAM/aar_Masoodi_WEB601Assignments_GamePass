@@ -8,6 +8,8 @@
     <span *ngIf="content.imgURL">
         <img src="{{content.imgURL}}" (click)="clickInfo(content)"/>
     </span>
-    <p appHoverAffect [styleType]='"bold"'>{{content.tags}}</p>
+    <div *ngFor ="let item of content.tags;">
+        <span appHoverAffect [styleType] ='"bold"'>{{item}}</span>
+    </div>
 </div>
 
