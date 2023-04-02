@@ -1,6 +1,6 @@
 <div class="myCard" >
     <h1>{{content.title}}</h1>
-    <h3 appHoverAffect>{{content.type}}</h3>
+    <h3 appHoverAffect [styleType]='"underline"'>{{content.type}}</h3>
     <p>{{content.description}}</p>
     <span *ngIf="!content.imgURL">
         <img src="https://th.bing.com/th/id/OIP.eqzyXgwEADUnVs7aHvCcxAHaHa?pid=ImgDet&rs=1" alt="Default Image">
@@ -8,6 +8,6 @@
     <span *ngIf="content.imgURL">
         <img src="{{content.imgURL}}" (click)="clickInfo(content)"/>
     </span>
-    <p>{{content.tags}}</p>
+    <p appHoverAffect [styleType]='"bold"'>{{content.tags}}</p>
 </div>
 
