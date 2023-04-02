@@ -1,6 +1,7 @@
-<div *ngIf="content.id <= 5" class="myCard">
+<div *ngIf="content.id <= 5" class="myCard" >
     <h1>{{content.title}}</h1>
     <p>{{content.description}}</p>
     <img src="{{content.imgURL}}" (click)="clickInfo(content)"/>
     <p>{{content.tags}}</p>
 </div>
+
