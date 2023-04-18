@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
     <label for="title">Title:</label>
     <input type="text" id="title" [(ngModel)]="title">
 </div>
@@ -21,5 +21,9 @@
 <div>
     <label for="imgURL">Image URL:</label>
     <input type="text" id="imgURL" [(ngModel)]="imgURL">
-</div>
-<button (click)="addContent()">Add Content</button>
+</div> -->
+
+<label for="item-input">Add an item:</label>
+<input type="text" id="item-input" #newItem>
+<button type="button" (click)="addGame(newItem.value)">Add to parent's list</button>
+<!-- <button (click)="addGame()">Add Content</button> -->

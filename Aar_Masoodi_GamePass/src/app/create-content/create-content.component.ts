@@ -9,19 +9,14 @@ import { Output, EventEmitter } from '@angular/core';
 })
 
 export class CreateContentComponent {
-  title: string = '';
-  description: string = '';
-  tags: string[] = [];
-  id: number = 0;
-  type: string = '';
-  imgURL: string = '';
 
-  @Output() newGameAdd = new EventEmitter<Content>();
+  @Output() newGameEvent = new EventEmitter<string>();
 
-  newGameItem: Content | undefined;
+  newGameItem!: "this is a test from child to parent";
 
-  addContent(): void {
-    this.newGameAdd.emit(this.newGameItem);
+  public addGame(value: string) {
+    this.newGameEvent.emit(value);
+    console.log(this.newGameEvent);
   }
 
   // onAddContent() {

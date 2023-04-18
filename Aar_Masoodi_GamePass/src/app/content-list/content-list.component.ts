@@ -89,8 +89,16 @@ export class ContentListComponent {
     });
   }
 
-  addGameToList(newGameFromChild: Content) {
-    this.contentArray.push(newGameFromChild);
+  items = ['item1', 'item2', 'item3', 'item4'];
+
+  addItem(newItem: string) {
+    this.items.push(newItem);
+  }
+
+  addGameToList($event: any): void {
+    this.contentArray.push($event);
+
+    this.contentArray = Object.assign([], this.contentArray)
 
     this.contentArray = [...this.contentArray];
   }
