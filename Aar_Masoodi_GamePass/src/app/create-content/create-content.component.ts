@@ -10,36 +10,16 @@ import { Output, EventEmitter } from '@angular/core';
 
 export class CreateContentComponent {
 
-  @Output() newGameEvent = new EventEmitter<string>();
   @Output() addGameEvent = new EventEmitter<Content>();
 
 
-  newGame!: Content;
+  newGame: Content = {title: '', id: 0, description: '', creator: '' };
 
   addNewGame(): void {
     this.addGameEvent.emit(this.newGame);
   }
 
-  public addGame(value: string) {
-    this.newGameEvent.emit(value);
-    console.log(this.newGameEvent);
-  }
 
-  // onAddContent() {
-  //   const content = {
-  //     title: this.title,
-  //     description: this.description,
-  //     type: this.type,
-  //     tags: this.tags,
-  //     id: this.id,
-  //     imgURL: this.imgURL
-  //   };
-    // contentAddedCallback(content);
-    // console.log('New content added successfully!');
-    // this.title = '';
-    // this.description = '';
-    // this.tags = [];
-    // this.id = 0;
-    // this.imgURL = '';
+
   }
 
