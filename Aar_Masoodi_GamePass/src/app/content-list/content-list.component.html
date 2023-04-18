@@ -1,3 +1,8 @@
+<app-create-content (newGameAdd)="addGameToList($event)"></app-create-content>
+
+<hr>
+
+<h3>Search</h3>
 <input [(ngModel)]="searchText">
 <button (click)="searchContent(searchText) ">Submit</button>
 <h1 id="search" class="">{{isFound}}</h1>

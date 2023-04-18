@@ -1,0 +1,25 @@
+<div>
+    <label for="title">Title:</label>
+    <input type="text" id="title" [(ngModel)]="title">
+</div>
+<div>
+    <label for="description">Description:</label>
+    <textarea id="description" [(ngModel)]="description"></textarea>
+</div>
+<div>
+    <label for="type">Type:</label>
+    <input type="text" id="type" [(ngModel)]="type">
+</div>
+<div>
+    <label for="tags">Tags:</label>
+    <input type="text" id="tags" [(ngModel)]="tags">
+</div>
+<div>
+    <label for="id">ID:</label>
+    <input type="number" id="id" [(ngModel)]="id">
+</div>
+<div>
+    <label for="imgURL">Image URL:</label>
+    <input type="text" id="imgURL" [(ngModel)]="imgURL">
+</div>
+<button (click)="addContent()">Add Content</button>

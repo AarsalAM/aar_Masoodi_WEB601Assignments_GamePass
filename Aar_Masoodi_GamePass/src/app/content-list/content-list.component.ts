@@ -89,5 +89,11 @@ export class ContentListComponent {
     });
   }
 
+  addGameToList(newGameFromChild: Content) {
+    this.contentArray.push(newGameFromChild);
+
+    this.contentArray = [...this.contentArray];
+  }
+
 
 }
