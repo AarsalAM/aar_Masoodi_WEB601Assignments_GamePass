@@ -1,29 +1,36 @@
-<!-- <div>
+<div>
     <label for="title">Title:</label>
-    <input type="text" id="title" [(ngModel)]="title">
+    <input type="text" id="title" [(ngModel)]="newGame.title">
 </div>
 <div>
     <label for="description">Description:</label>
-    <textarea id="description" [(ngModel)]="description"></textarea>
+    <textarea id="description" [(ngModel)]="newGame.description"></textarea>
 </div>
 <div>
     <label for="type">Type:</label>
-    <input type="text" id="type" [(ngModel)]="type">
+    <input type="text" id="type" [(ngModel)]="newGame.type">
+</div>
+<div>
+    <label for="creator">Creator:</label>
+    <input type="text" id="type" [(ngModel)]="newGame.creator">
 </div>
 <div>
     <label for="tags">Tags:</label>
-    <input type="text" id="tags" [(ngModel)]="tags">
+    <input type="text" id="tags" [(ngModel)]="newGame.tags">
 </div>
 <div>
     <label for="id">ID:</label>
-    <input type="number" id="id" [(ngModel)]="id">
+    <input type="number" id="id" [(ngModel)]="newGame.id">
 </div>
 <div>
     <label for="imgURL">Image URL:</label>
-    <input type="text" id="imgURL" [(ngModel)]="imgURL">
-</div> -->
+    <input type="text" id="imgURL" [(ngModel)]="newGame.imgURL">
+</div>
 
-<label for="item-input">Add an item:</label>
+<button (click)="addNewGame()">Add Content</button>
+
+<hr>
+
+<!-- <label for="item-input">Add an item:</label>
 <input type="text" id="item-input" #newItem>
-<button type="button" (click)="addGame(newItem.value)">Add to parent's list</button>
-<!-- <button (click)="addGame()">Add Content</button> -->
+<button type="button" (click)="addGame(newItem.value)">Add to parent's list</button> -->

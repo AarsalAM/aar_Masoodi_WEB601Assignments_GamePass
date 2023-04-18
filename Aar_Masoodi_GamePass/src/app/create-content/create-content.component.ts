@@ -11,8 +11,14 @@ import { Output, EventEmitter } from '@angular/core';
 export class CreateContentComponent {
 
   @Output() newGameEvent = new EventEmitter<string>();
+  @Output() addGameEvent = new EventEmitter<Content>();
 
-  newGameItem!: "this is a test from child to parent";
+
+  newGame!: Content;
+
+  addNewGame(): void {
+    this.addGameEvent.emit(this.newGame);
+  }
 
   public addGame(value: string) {
     this.newGameEvent.emit(value);
