@@ -1,5 +1,5 @@
 <app-content-card 
     *ngFor="let item of contentArray; index as i; first as isFirst" 
-    [ngClass]="{ 'first' : isFirst}"
+    [ngClass]="{firstitem:isFirst}"
     [content]="item" >
 </app-content-card>
