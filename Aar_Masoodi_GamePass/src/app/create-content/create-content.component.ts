@@ -13,12 +13,31 @@ export class CreateContentComponent {
   @Output() addGameEvent = new EventEmitter<Content>();
 
 
-  newGame: Content = {title: '', id: 0, description: '', creator: '' };
+  newGame: Content = {title: '', id: 0, description: '', creator: '', tags: [], imgURL: '' };
+
+  // public newGame: Content;
 
   addNewGame(): void {
-    this.addGameEvent.emit(this.newGame);
+    this.ourPromise.then(successResult => this.addGameEvent.emit(this.newGame)).catch(failResult => console.log(failResult));
+    // this.addGameEvent.emit(this.newGame);
   }
 
+
+
+
+
+  ourPromise = new Promise((success, fail) =>{
+    let testPass = true;
+    if (testPass) {
+      console.log("The addition was successful");
+    }
+    else {
+      console.log("Adding new content not successful")
+    }
+  })
+
+
+  
 
 
   }
