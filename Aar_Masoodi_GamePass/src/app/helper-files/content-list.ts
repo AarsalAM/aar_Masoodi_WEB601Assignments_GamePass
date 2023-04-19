@@ -21,12 +21,20 @@ export class ContentList{
 
     getPrint(index: number) {
         let readerFriendlyHtml = '<div>';
-        readerFriendlyHtml += `<p>` + this._items[index].title + `<p>`;
-        readerFriendlyHtml += `<p>` + this._items[index].description + `<p>`;
-        readerFriendlyHtml += `<p>` + this._items[index].type + `<p>`;
-        readerFriendlyHtml += `<p>` + this._items[index].creator + `<p>`;
-        readerFriendlyHtml += `<img src ="` + this._items[index].imgURL + `">`;
-        readerFriendlyHtml += `</div>`;
-        return readerFriendlyHtml;
+        console.log(this._items.length);
+        if (this._items.length > index) {  
+            readerFriendlyHtml += `<p>` + this._items[index].title + `<p>`;
+            readerFriendlyHtml += `<p>` + this._items[index].description + `<p>`;
+            readerFriendlyHtml += `<p>` + this._items[index].type + `<p>`;
+            readerFriendlyHtml += `<p>` + this._items[index].creator + `<p>`;
+            readerFriendlyHtml += `<img src ="` + this._items[index].imgURL + `">`;
+            readerFriendlyHtml += `</div>`;
+            return readerFriendlyHtml;
+        }
+        else {
+            readerFriendlyHtml += '<b>This item selection is not valid</b>';
+            return readerFriendlyHtml;
+        }
+        
     }
 }
