@@ -1,6 +1,14 @@
 <div *ngIf="content.id <= 5" class="myCard">
     <h1>{{content.title}}</h1>
+    <span *ngIf="content.type">
+        <h3>{{content.type}}</h3>
+    </span>
+    <p>{{content.creator}}</p>
     <p>{{content.description}}</p>
-    <img src="{{content.imgURL}}" (click)="clickInfo(content)"/>
-    <p>{{content.tags}}</p>
+    <span *ngIf="content.imgURL">
+        <img src="{{content.imgURL}}" (click)="clickInfo(content)"/>
+    </span>
+    <span *ngIf="content.tags">
+        <p>{{content.tags}}</p>
+    </span>
 </div>
