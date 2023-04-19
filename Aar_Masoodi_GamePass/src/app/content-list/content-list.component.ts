@@ -44,8 +44,6 @@ export class ContentListComponent {
         title: 'Sea of Thieves',
         description: 'Sail as a pirate!',
         creator: 'Rare',
-        type: 'Adventure',
-        imgURL: 'https://www.juegostorrentpc.net/wp-content/uploads/2020/03/Doom-eternal-cover-pc-150x150.jpg',
         tags: ['adventure','sailing','pvp']
       },
       {
@@ -54,8 +52,7 @@ export class ContentListComponent {
         description: 'Dirt racing!',
         creator: 'Codemasters',
         type: 'Racing',
-        imgURL: 'https://www.juegostorrentpc.net/wp-content/uploads/2020/03/Doom-eternal-cover-pc-150x150.jpg',
-        tags: ['racing','arcade']
+        imgURL: 'https://www.juegostorrentpc.net/wp-content/uploads/2020/03/Doom-eternal-cover-pc-150x150.jpg'
       },
       {
         id: 6,
@@ -63,7 +60,6 @@ export class ContentListComponent {
         description: 'An adventure awaits.',
         creator: 'Lionhead',
         type: 'Adventure',
-        imgURL: 'https://www.juegostorrentpc.net/wp-content/uploads/2020/03/Doom-eternal-cover-pc-150x150.jpg',
         tags: ['adventure','player-choice']
       }
     ];
