@@ -21,7 +21,6 @@ export class ContentListComponent {
   
   ngOnInit(): void {
     this.contentService.getContentObs().subscribe(games => this.contentArray = games);
-    this.game$ = this.contentService.getGameObs(3);
   }
 
 
