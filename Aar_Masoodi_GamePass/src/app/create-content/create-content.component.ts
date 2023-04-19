@@ -15,30 +15,46 @@ export class CreateContentComponent {
 
   newGame: Content = {title: '', id: 0, description: '', creator: '', tags: [], imgURL: '' };
 
-  // public newGame: Content;
+  //public newGame: Content;
 
-  addNewGame(): void {
-    this.ourPromise.then(successResult => this.addGameEvent.emit(this.newGame)).catch(failResult => console.log(failResult));
-    // this.addGameEvent.emit(this.newGame);
+  addNewGame(): void{
+    //this.ourPromise.then(successResult => this.addGameEvent.emit(this.newGame)).catch(failResult => console.log(failResult));
+    const ourPromise = new Promise((success,fail) => {
+      let testPass = true;
+      if(testPass) {
+        success(this.newGame);
+      }
+      else {
+        fail("Error. Reason is: ");
+      }
+    });
+
+    ourPromise.then((successResult) => {
+      console.log("successfully added the content");
+      this.addGameEvent.emit(this.newGame);
+      //successResult was originally put in the box above
+
+      this.newGame = {title: '', id: 0, description: '', creator: '', tags: [], imgURL: '' }
+        
+      }).catch(failResult => console.log("The game was not added successfuly"));
+    };
   }
 
 
 
 
 
-  ourPromise = new Promise((success, fail) =>{
-    let testPass = true;
-    if (testPass) {
-      console.log("The addition was successful");
-    }
-    else {
-      console.log("Adding new content not successful")
-    }
-  })
+  // ourPromise = new Promise((success, fail) =>{
+  //   let testPass = true;
+  //   if (testPass) {
+  //     console.log("The addition was successful");
+  //   }
+  //   else {
+  //     console.log("Adding new content not successful")
+  //   }
+  // })
 
 
   
 
-
-  }
 

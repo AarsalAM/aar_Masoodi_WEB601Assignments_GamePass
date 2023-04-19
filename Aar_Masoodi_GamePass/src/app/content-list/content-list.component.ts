@@ -94,7 +94,7 @@ export class ContentListComponent {
 
     // this.contentArray = Object.assign([], this.contentArray)
 
-    this.contentArray = [...this.contentArray];
+    // this.contentArray = [...this.contentArray];
   }
 
 

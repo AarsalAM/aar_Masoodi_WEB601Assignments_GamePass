@@ -1,7 +1,8 @@
 <!-- <div *ngIf="newGame"> -->
+
     <div>
         <label for="title">Title:</label>
-        <input type="text" id="title" [(ngModel)]="newGame.title">
+        <input type="text" id="title" [(ngModel)]="newGame.title" required>
     </div>
     <div>
         <label for="description">Description:</label>
@@ -28,6 +29,7 @@
         <input type="text" id="imgURL" [(ngModel)]="newGame.imgURL">
     </div>
 
-    <button (click)="addNewGame()">Add Content</button>
+    <button type="button" (click)="addNewGame()">Add Content</button>
+
 <!-- </div> -->
 
