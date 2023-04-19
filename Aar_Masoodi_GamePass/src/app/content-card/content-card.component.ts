@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
+import { ContentService } from '../GamePassService/content.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-content-card',
@@ -9,11 +11,16 @@ import { Content } from '../helper-files/content-interface';
 export class ContentCardComponent {
   @Input() content!: Content;
 
-  constructor() {
+  constructor(private contentService: ContentService) {
   }
 
   clickInfo(content: Content) {
     console.log('The ID is: ', content.id, 'The Title is: ', content.title);
   }
+
+
+
+
+
 
 }

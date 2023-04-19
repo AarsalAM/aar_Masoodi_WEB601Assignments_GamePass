@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 import { ContentService } from '../GamePassService/content.service';
 import { contentArray } from '../helper-files/contentDb';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-content-list',
@@ -11,15 +12,19 @@ import { contentArray } from '../helper-files/contentDb';
 export class ContentListComponent {
 
   contentArray: Content[] = [];
+  game$: Observable<Content>;
 
   @Input() searchText: any;
 
-  constructor(private contentService: ContentService) {
+  constructor(public contentService: ContentService) {
   }
   
   ngOnInit(): void {
     this.contentService.getContentObs().subscribe(games => this.contentArray = games);
+    this.game$ = this.contentService.getGameObs(3);
   }
+
+
 
   isFound: string = "";
   searchContent(searchText: string) {
