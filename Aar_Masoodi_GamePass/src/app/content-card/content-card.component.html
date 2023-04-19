@@ -1,5 +1,6 @@
-<div class="myCard" >
+<div appHoverAffect [styleType] = '"border"' class="myCard" >
     <h1>{{content.title}}</h1>
+    <h2>{{content.creator}}</h2>
     <h3 appHoverAffect [styleType]='"underline"'>{{content.type}}</h3>
     <p>{{content.description}}</p>
     <span *ngIf="!content.imgURL">
