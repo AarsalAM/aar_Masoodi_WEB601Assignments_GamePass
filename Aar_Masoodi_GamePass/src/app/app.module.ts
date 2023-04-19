@@ -9,6 +9,9 @@ import { FormsModule } from '@angular/forms';
 import { HoverAffectDirective } from './hover-affect.directive';
 import { MessagesComponent } from './messages/messages.component';
 import { HttpClientModule } from '@angular/common/http';
+import { InMemoryDataService } from './services/in-memory-data.service';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+
 
 
 @NgModule({
@@ -21,7 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     MessagesComponent,
   ],
   imports: [
-    BrowserModule, FormsModule, HttpClientModule
+    BrowserModule, FormsModule, HttpClientModule, HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false, delay: 1000,})
   ],
   providers: [],
   bootstrap: [AppComponent]

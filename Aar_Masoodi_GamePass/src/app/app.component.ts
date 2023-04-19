@@ -19,14 +19,14 @@ export class AppComponent {
               ) {}
 
 
-  getGameObs(id: number) {
-    let gameFound;
-    this.contentService.getGameObs(id).subscribe((game) => {
-      gameFound = game;
-      // this.messageService.add("New content loaded in");
-    });
-    return gameFound;
-  }
+  // getGameObs(id: number) {
+  //   let gameFound;
+  //   this.contentService.getGameObs(id).subscribe((game) => {
+  //     gameFound = game;
+  //     // this.messageService.add("New content loaded in");
+  //   });
+  //   return gameFound;
+  // }
 
   
 }
