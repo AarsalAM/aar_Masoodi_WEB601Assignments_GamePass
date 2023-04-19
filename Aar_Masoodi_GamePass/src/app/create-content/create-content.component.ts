@@ -12,6 +12,8 @@ export class CreateContentComponent {
 
   @Output() addGameEvent = new EventEmitter<Content>();
 
+  errorMessage = "";
+
 
   newGame: Content = {title: '', id: 0, description: '', creator: '', tags: [], imgURL: '' };
 
@@ -36,7 +38,10 @@ export class CreateContentComponent {
 
       this.newGame = {title: '', id: 0, description: '', creator: '', tags: [], imgURL: '' }
         
-      }).catch(failResult => console.log("The game was not added successfuly"));
+      }).catch((failResult) => {
+        this.errorMessage = "AN ERROR OCCURED"
+        console.log("The game was not added successfuly");
+      })
     };
   }
 
