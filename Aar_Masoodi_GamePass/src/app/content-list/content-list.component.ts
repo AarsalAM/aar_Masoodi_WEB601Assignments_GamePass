@@ -76,6 +76,7 @@ export class ContentListComponent {
       }
     ];
   }
+
   isFound: string = "";
   searchContent(searchText: string) {
     this.isFound = "This Item Was Not Found";
@@ -88,6 +89,5 @@ export class ContentListComponent {
       }
     });
   }
-
 
 }
