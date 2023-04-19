@@ -9,27 +9,27 @@
 <h1 id="search" class="">{{isFound}}</h1>
 
 <!--Type set to FPS-->
-<!-- <div *ngFor="let item of (contentArray | filterContent:'FPS'); index as i" class="fps"> 
+<div *ngFor="let item of (contentArray | filterContent:'FPS'); index as i" class="fps"> 
     <app-content-card  [content]="item"></app-content-card>
-</div> -->
+</div>
 
 
 <!--Type set to Adventure-->
-<!-- <div *ngFor="let item of (contentArray | filterContent:'Adventure'); index as i" class="adv"> 
+<div *ngFor="let item of (contentArray | filterContent:'Adventure'); index as i" class="adv"> 
     <app-content-card  [content]="item"></app-content-card>
-</div> -->
+</div>
 
 <!--Type set to Racing-->
-<!-- <div *ngFor="let item of (contentArray | filterContent:'Racing'); index as i" class="racing"> 
+<div *ngFor="let item of (contentArray | filterContent:'Racing'); index as i" class="racing"> 
     <app-content-card  [content]="item"></app-content-card>
-</div> -->
+</div>
 
 
 <!--No type set-->
-<!-- <div *ngFor="let item of (contentArray | filterContent); index as i" class="noType"> 
-    <app-content-card  [content]="item"></app-content-card>
-</div> -->
-
-<div *ngFor="let item of (contentArray); index as i"> 
+<div *ngFor="let item of (contentArray | filterContent); index as i" class="noType"> 
     <app-content-card  [content]="item"></app-content-card>
 </div>
+<!-- 
+<div *ngFor="let item of (contentArray); index as i"> 
+    <app-content-card  [content]="item"></app-content-card>
+</div> -->
