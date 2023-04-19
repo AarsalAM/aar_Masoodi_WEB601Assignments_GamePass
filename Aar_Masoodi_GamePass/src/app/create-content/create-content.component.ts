@@ -23,7 +23,7 @@ export class CreateContentComponent {
     //this.ourPromise.then(successResult => this.addGameEvent.emit(this.newGame)).catch(failResult => console.log(failResult));
     const ourPromise = new Promise((success,fail) => {
       let testPass = true;
-      if(testPass) {
+      if(this.newGame.title, this.newGame.description, this.newGame.creator, this.newGame.id) {
         success(this.newGame);
       }
       else {
@@ -37,9 +37,11 @@ export class CreateContentComponent {
       //successResult was originally put in the box above
 
       this.newGame = {title: '', id: 0, description: '', creator: '', tags: [], imgURL: '' }
+      this.errorMessage = "";
         
       }).catch((failResult) => {
         this.errorMessage = "AN ERROR OCCURED"
+        this.newGame = {title: '', id: 0, description: '', creator: '', tags: [], imgURL: '' }
         console.log("The game was not added successfuly");
       })
     };
