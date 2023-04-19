@@ -19,7 +19,7 @@ export class ContentService {
     return of(contentArray);
   }
 
-  getGameObs(id: number) : Observable<Content>{
+  getGameObs(id: number) : Observable<Content | undefined>{
     const game = contentArray.find(h => h.id === id)!;
     this.messageService.add("Content Item at id: " + id);
     console.log(game)
