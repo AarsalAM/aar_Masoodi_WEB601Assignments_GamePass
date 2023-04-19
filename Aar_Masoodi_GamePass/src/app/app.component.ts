@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ContentService } from './GamePassService/content.service';
 import { Observable } from 'rxjs';
 import { Content } from './helper-files/content-interface';
+import { MessageService } from './message.service';
 
 @Component({
   selector: 'app-root',
@@ -13,11 +14,10 @@ export class AppComponent {
 
   game$: Observable<Content>;
 
-  constructor(public contentService: ContentService) {}
+  constructor(private contentService: ContentService,
+              private messageService: MessageService
+              ) {}
 
-  // ngOnInit(): void {
-  //   this.game$ = this.contentService.getGameObs(1);
-  // }
 
   getGameObs(id: number) {
     let gameFound;
