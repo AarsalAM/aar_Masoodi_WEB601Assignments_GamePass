@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 import { ContentService } from '../GamePassService/content.service';
-import { contentArray } from '../helper-files/contentDb';
+// import { contentArray } from '../helper-files/contentDb';
 import { Observable } from 'rxjs';
 
 @Component({

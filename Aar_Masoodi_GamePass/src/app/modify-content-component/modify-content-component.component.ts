@@ -14,9 +14,9 @@ export class ModifyContentComponentComponent {
 
   constructor(private contentService: ContentService) {};
 
-  addContentToList(newContentItem: Content): void {
-    this.contentService.addContent(newContentItem).subscribe(newContentFromServer => this.push(newContentFromServer))
-  }
+  // addContentToList(newContentItem: Content): void {
+  //   this.contentService.addContent(newContentItem).subscribe(newContentFromServer => this.push(newContentFromServer))
+  // }
 
 
 

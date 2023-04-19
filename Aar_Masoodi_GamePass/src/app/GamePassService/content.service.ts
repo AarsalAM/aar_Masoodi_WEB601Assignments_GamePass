@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { Content } from '../helper-files/content-interface';
-import { contentArray } from '../helper-files/contentDb';
+// import { contentArray } from '../helper-files/contentDb';
 import { MessageService } from '../message.service';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
@@ -17,9 +17,16 @@ export class ContentService {
 
   contentList = this.http.get<Content[]>("api/content")
 
+  private httpOptions = {
+    headers: new HttpHeaders({ 'Content-type': 'application/json' })
+  };
+
   getContentObs() : Observable<Content[]>{
     this.messageService.add("Content array Loaded!")
     return this.contentList;
+  }
+  addContent(newContentItem: Content): Observable<Content>{
+    return this.http.post<Content>("api/content", newContentItem, this.httpOptions);
   }
 
   // getGameObs(id: number) : Observable<Content | undefined>{
