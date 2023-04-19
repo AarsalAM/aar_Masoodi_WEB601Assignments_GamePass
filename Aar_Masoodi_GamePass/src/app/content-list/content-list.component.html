@@ -3,8 +3,8 @@
 <h1 id="search" class="">{{isFound}}</h1>
 
 <!--Type set to FPS-->
-<div *ngFor="let item of (contentArray | filterContent:'FPS'); index as i" class="fps"> 
-    <app-content-card  [content]="item"></app-content-card>
+<div *ngFor="let item of (contentArray | filterContent:'FPS'); index as i; let first = first; let last = last;" class="fps">
+    <app-content-card  [content]="item" ></app-content-card>
 </div>
 
 

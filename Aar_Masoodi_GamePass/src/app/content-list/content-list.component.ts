@@ -72,6 +72,15 @@ export class ContentListComponent {
         creator: 'Capcom',
         imgURL: 'https://cdn-prod.scalefast.com/public/assets/user/8731055/image/ba9d8b58c4c8e28d103a4b90cee7cd58.png',
         tags: ['co-op','grindy']
+      },
+      {
+        id: 8,
+        title: 'Fallout',
+        description: 'Hunt them all!',
+        creator: 'Capcom',
+        type: 'FPS',
+        imgURL: 'https://cdn-prod.scalefast.com/public/assets/user/8731055/image/ba9d8b58c4c8e28d103a4b90cee7cd58.png',
+        tags: ['co-op','grindy']
       }
     ];
   }
