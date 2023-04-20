@@ -28,7 +28,7 @@ addNewGame(): void {
 
 openDialog(){
   this.matDialog.open(DialogueBodyComponent, {
-    width: '350px',
+    width: '500px',
   })
 }  
 

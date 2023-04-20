@@ -20,6 +20,8 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+
 
 
 
@@ -35,7 +37,7 @@ import {MatDividerModule} from '@angular/material/divider';
     DialogueBodyComponent,
   ],
   imports: [
-    BrowserModule, FormsModule, HttpClientModule, HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false, delay: 1000,}), BrowserAnimationsModule, MatButtonModule, MatInputModule, MatDialogModule, MatIconModule, MatCardModule, MatDividerModule
+    BrowserModule, FormsModule, HttpClientModule, HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false, delay: 1000,}), BrowserAnimationsModule, MatButtonModule, MatInputModule, MatDialogModule, MatIconModule, MatCardModule, MatDividerModule, MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
