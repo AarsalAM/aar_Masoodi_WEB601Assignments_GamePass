@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ContentListComponent } from './content-list/content-list.component';
 import { GameDetailComponent } from './game-detail/game-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/list', pathMatch: 'full' },
   {path: 'list', component: ContentListComponent},
-  {path: 'list/:id', component: GameDetailComponent}
+  {path: 'list/:id', component: GameDetailComponent},
+  {path: "**", component: PageNotFoundComponent}
 ];
 
 @NgModule({
