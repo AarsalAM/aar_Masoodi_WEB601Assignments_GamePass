@@ -23,6 +23,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import { AppRoutingModule } from './app-routing.module';
 import { GameDetailComponent } from './game-detail/game-detail.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -38,6 +39,7 @@ import { GameDetailComponent } from './game-detail/game-detail.component';
     ModifyContentComponentComponent,
     DialogueBodyComponent,
     GameDetailComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule, HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false, delay: 1000,}), BrowserAnimationsModule, MatButtonModule, MatInputModule, MatDialogModule, MatIconModule, MatCardModule, MatDividerModule, MatListModule, AppRoutingModule
