@@ -22,6 +22,7 @@ import { MatCardModule } from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
 import { AppRoutingModule } from './app-routing.module';
+import { GameDetailComponent } from './game-detail/game-detail.component';
 
 
 
@@ -36,6 +37,7 @@ import { AppRoutingModule } from './app-routing.module';
     MessagesComponent,
     ModifyContentComponentComponent,
     DialogueBodyComponent,
+    GameDetailComponent,
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule, HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false, delay: 1000,}), BrowserAnimationsModule, MatButtonModule, MatInputModule, MatDialogModule, MatIconModule, MatCardModule, MatDividerModule, MatListModule, AppRoutingModule

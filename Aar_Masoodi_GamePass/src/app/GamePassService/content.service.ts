@@ -32,6 +32,12 @@ export class ContentService {
     return this.http.post<Content>("api/content", newContentItem, this.httpOptions);
   }
 
+  getGame(id: number): Observable<Content> {
+    const gameUrl = `api/detail/${id}`;
+    console.log(gameUrl);
+    return this.http.get<Content>(gameUrl);
+  }
+
   // getGameObs(id: number) : Observable<Content | undefined>{
   //   const game = content.find(h => h.id === id)!;
   //   if(h=> h.id === id){
