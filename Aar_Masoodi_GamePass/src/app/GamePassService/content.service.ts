@@ -25,7 +25,10 @@ export class ContentService {
     this.messageService.add("Content array Loaded!")
     return this.contentList;
   }
+
+  //use post so an ID is generated
   addContent(newContentItem: Content): Observable<Content>{
+    this.messageService.add("New Item Added Successfully!");
     return this.http.post<Content>("api/content", newContentItem, this.httpOptions);
   }
 

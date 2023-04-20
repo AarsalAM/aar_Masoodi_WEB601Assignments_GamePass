@@ -14,9 +14,16 @@ export class ModifyContentComponentComponent {
 
   constructor(private contentService: ContentService) {};
 
-  // addContentToList(newContentItem: Content): void {
-  //   this.contentService.addContent(newContentItem).subscribe(newContentFromServer => this.push(newContentFromServer))
-  // }
+  newGame: Content = {title: '', id: 0, description: '', creator: '', tags: [], imgURL: '' };
+
+
+addNewGame(): void {
+  this.addGameEvent.emit(this.newGame);
+  console.log(this.newGame);
+
+  this.newGame = {title: '', id: 0, description: '', creator: '', tags: [], imgURL: '' }
+}
+   
 
 
 
