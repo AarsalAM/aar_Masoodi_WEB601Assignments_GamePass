@@ -1,8 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 import { ContentListComponent } from '../content-list/content-list.component';
 import { ActivatedRoute } from '@angular/router';
-import { Location } from '@angular/common';
 
 import { ContentService } from '../GamePassService/content.service';
 import { MessageService } from '../message.service';
@@ -13,24 +12,29 @@ import { MessageService } from '../message.service';
   styleUrls: ['./game-detail.component.scss']
 })
 
-export class GameDetailComponent {
+export class GameDetailComponent implements OnInit {
 
   game: Content | undefined;
+  id: number;
 
   constructor(
     private route: ActivatedRoute,
     private contentService: ContentService,
-    private location: Location
+    private messsageService: MessageService
   ) {}
 
 
   ngOnInit(): void {
     this.getGame();
-  }
+      // this.route.paramMap.subscribe((params) => {
+      // this.id = Number(params.get("id") ?? 0);
+      // this.contentService.getGame(this.id).subscribe((c) => { this.game = c})
+    }
 
   getGame(): void {
-    const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
-    this.contentService.getGame(id).subscribe(game => this.game = game);
-  }
+     const id = Number(this.route.snapshot.paramMap.get('id'));
+     this.contentService.getGame(id).subscribe(game => this.game = game);
+     this.messsageService.add("Detailed Information for ID: " + id)
+   }
 
 }

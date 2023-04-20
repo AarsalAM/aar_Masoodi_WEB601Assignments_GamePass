@@ -9,7 +9,6 @@
     <!-- <h3 appHoverAffect [styleType]='"underline"'>{{content.type}}</h3> -->
     <mat-card-content>
         <h4>{{content.creator}}</h4>
-        <p>{{content.description}}</p>
     </mat-card-content>
     <span *ngIf="!content.imgURL">
         <img mat-card-image src="https://th.bing.com/th/id/OIP.eqzyXgwEADUnVs7aHvCcxAHaHa?pid=ImgDet&rs=1" alt="Default Image">
@@ -25,7 +24,7 @@
                 </mat-list-item>
             </mat-list>
         </div>
-        <a routerLink="/detail/{{content.id}}">Click For More Details</a>
+        <a routerLink="/list/{{content.id}}">Click For More Details</a>
     </mat-card-content>
 </mat-card>
 

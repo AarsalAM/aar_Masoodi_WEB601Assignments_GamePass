@@ -10,6 +10,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class ContentService {
 
+  gamesUrl = 'api/list';
+
+  private httpOptions = {
+    headers: new HttpHeaders({ 'Content-type': 'application/json' })
+  };
+
   constructor(
     private messageService: MessageService,
     private http: HttpClient,
@@ -17,9 +23,6 @@ export class ContentService {
 
   contentList = this.http.get<Content[]>("api/content")
 
-  private httpOptions = {
-    headers: new HttpHeaders({ 'Content-type': 'application/json' })
-  };
 
   getContentObs() : Observable<Content[]>{
     this.messageService.add("Content array Loaded!")
@@ -33,17 +36,6 @@ export class ContentService {
   }
 
   getGame(id: number): Observable<Content> {
-    const gameUrl = `api/detail/${id}`;
-    console.log(gameUrl);
-    return this.http.get<Content>(gameUrl);
+    return this.http.get<Content>("api/content/" + id);
   }
-
-  // getGameObs(id: number) : Observable<Content | undefined>{
-  //   const game = content.find(h => h.id === id)!;
-  //   if(h=> h.id === id){
-  //     this.messageService.add("Content Item at id: " + id);
-  //   }
-  //   console.log(game)
-  //   return of(game)
-  // }
 }
