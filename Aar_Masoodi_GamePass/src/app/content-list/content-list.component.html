@@ -2,9 +2,12 @@
 
 <hr>
 
-<input [(ngModel)]="searchText">
-<button (click)="searchContent(searchText) ">Submit</button>
+<mat-form-field>
+    <input matInput [(ngModel)]="searchText">
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="searchContent(searchText) ">Submit</button>
 <h1 id="search" class="">{{isFound}}</h1>
+
 
 
 

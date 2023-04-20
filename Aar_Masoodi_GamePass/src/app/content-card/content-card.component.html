@@ -1,15 +1,25 @@
-<div class="myCard" >
-    <h1>{{content.title}}</h1>
-    <h3 appHoverAffect [styleType]='"underline"'>{{content.type}}</h3>
-    <p>{{content.description}}</p>
+
+
+<mat-card class="myCard">
+    <mat-card-header>
+        <mat-card-title>{{content.title}}</mat-card-title>
+        <mat-card-subtitle appHoverAffect [styleType]='"underline"'>{{content.type}}</mat-card-subtitle>
+    </mat-card-header>
+    <!-- <h3 appHoverAffect [styleType]='"underline"'>{{content.type}}</h3> -->
+    <mat-card-content>
+        <h4>{{content.creator}}</h4>
+        <p>{{content.description}}</p>
+    </mat-card-content>
     <span *ngIf="!content.imgURL">
-        <img src="https://th.bing.com/th/id/OIP.eqzyXgwEADUnVs7aHvCcxAHaHa?pid=ImgDet&rs=1" alt="Default Image">
+        <img mat-card-image src="https://th.bing.com/th/id/OIP.eqzyXgwEADUnVs7aHvCcxAHaHa?pid=ImgDet&rs=1" alt="Default Image">
     </span>
     <span *ngIf="content.imgURL">
-        <img src="{{content.imgURL}}" (click)="clickInfo(content)"/>
+        <img mat-card-image src="{{content.imgURL}}" (click)="clickInfo(content)"/>
     </span>
-    <div *ngFor ="let item of content.tags;">
-        <p appHoverAffect [styleType] ='"bold"'>{{item}}</p>
-    </div>
-</div>
+    <mat-card-content>
+        <div *ngFor ="let item of content.tags;">
+            <p appHoverAffect [styleType] ='"bold"'>{{item}}</p>
+        </div>
+    </mat-card-content>
+</mat-card>
 

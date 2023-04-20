@@ -29,7 +29,6 @@ export class ContentListComponent {
   addContentToList(newContentItem: Content): void {
     this.contentService.addContent(newContentItem as Content).subscribe(game => this.contentArray.push(game))
     this.contentArray = [...this.contentArray];
-    console.log(this.contentArray);
   };
 
 
