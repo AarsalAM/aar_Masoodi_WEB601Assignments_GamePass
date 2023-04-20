@@ -21,6 +21,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -37,7 +38,7 @@ import {MatListModule} from '@angular/material/list';
     DialogueBodyComponent,
   ],
   imports: [
-    BrowserModule, FormsModule, HttpClientModule, HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false, delay: 1000,}), BrowserAnimationsModule, MatButtonModule, MatInputModule, MatDialogModule, MatIconModule, MatCardModule, MatDividerModule, MatListModule
+    BrowserModule, FormsModule, HttpClientModule, HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false, delay: 1000,}), BrowserAnimationsModule, MatButtonModule, MatInputModule, MatDialogModule, MatIconModule, MatCardModule, MatDividerModule, MatListModule, AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
