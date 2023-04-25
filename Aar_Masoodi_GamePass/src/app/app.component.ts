@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ContentService } from './GamePassService/content.service';
+import { LogUpdateService } from './log-update.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Aar_Masoodi_GamePass';
+
+  constructor(private contentService: ContentService, private logService: LogUpdateService) {}
+
+  ngOnInit(): void {
+    this.logService.init();
+  }
 }
