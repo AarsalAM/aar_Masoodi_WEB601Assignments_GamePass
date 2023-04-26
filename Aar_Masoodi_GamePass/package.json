@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "ng": "ng",
-    "start": "http-server -p 8080 -c-1 dist/AarsalMasoodiGamepass",
+    "start": "http-server -p 8060 -c-1 dist/AarsalMasoodiGamepass",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",

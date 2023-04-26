@@ -25,6 +25,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { GameDetailComponent } from './game-detail/game-detail.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -43,7 +44,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     PageNotFoundComponent,
   ],
   imports: [
-    BrowserModule, FormsModule, HttpClientModule, HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false, delay: 1000,}), BrowserAnimationsModule, MatButtonModule, MatInputModule, MatDialogModule, MatIconModule, MatCardModule, MatDividerModule, MatListModule, AppRoutingModule, ServiceWorkerModule.register('ngsw-worker.js', {
+    BrowserModule, FormsModule, HttpClientModule, HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false, delay: 1000,}), BrowserAnimationsModule, MatButtonModule, MatInputModule, MatDialogModule, MatIconModule, MatCardModule, MatDividerModule, MatListModule, MatSnackBarModule, AppRoutingModule, ServiceWorkerModule.register('ngsw-worker.js', {
   enabled: !isDevMode(),
   // Register the ServiceWorker as soon as the application is stable
   // or after 30 seconds (whichever comes first).
